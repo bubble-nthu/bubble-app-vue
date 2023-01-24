@@ -1,40 +1,60 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-
-const activeIndex = ref('1')
-const handleSelect = (key: string, keyPath: string[]) => {
-  console.log(key, keyPath)
-}
 </script>
 
 <template>
-  <el-menu
-    :default-active="activeIndex"
-    class="el-menu-demo"
-    mode="horizontal"
-    :ellipsis="false"
-    @select="handleSelect"
-  >
-    <el-menu-item index="0">LOGO</el-menu-item>
-    <div class="flex-grow" />
-    <el-menu-item index="1">Processing Center</el-menu-item>
-    <el-sub-menu index="2">
-      <template #title>Workspace</template>
-      <el-menu-item index="2-1">item one</el-menu-item>
-      <el-menu-item index="2-2">item two</el-menu-item>
-      <el-menu-item index="2-3">item three</el-menu-item>
-      <el-sub-menu index="2-4">
-        <template #title>item four</template>
-        <el-menu-item index="2-4-1">item one</el-menu-item>
-        <el-menu-item index="2-4-2">item two</el-menu-item>
-        <el-menu-item index="2-4-3">item three</el-menu-item>
-      </el-sub-menu>
-    </el-sub-menu>
-  </el-menu>
+  <header class="header-flex-container">
+    <div class="header-wrapper">
+      <scan class="header-logo">
+        <img src = "/src/assets/HomePage/Logo.svg" alt="Bubble Log" height="58" width="124" />
+      </scan>
+      <el-link class="header-function header-font" :underline="false">登入</el-link>
+      <el-link class="header-function header-font" :underline="false">註冊</el-link>
+      <el-button class="header-cta header-font" type="primary">展開行動</el-button>
+    </div>
+  </header>
 </template>
 
 <style>
-.flex-grow {
-  flex-grow: 1;
+.header-logo{
+  margin-right: auto;
+}
+.header-font {
+  font-size: 1em;
+  font-weight: Regular;
+}
+.header-function {
+  display: inline-flex;
+  height: 100%;
+  padding: 0 var(--el-menu-base-level-padding);
+  align-items: center;
+}
+.header-cta {
+  display: inline-flex;
+  height: 100%;
+  margin: 0 var(--el-menu-base-level-padding);
+  align-items: center;
+}
+.header-flex-container {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1px solid var(--el-color-info-light-7);
+}
+.header-wrapper {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0rem 2rem;
+  height: 100%;
+  width: 100%;
+}
+.el-link .el-icon--right.el-icon {
+  vertical-align: text-bottom;
 }
 </style>
