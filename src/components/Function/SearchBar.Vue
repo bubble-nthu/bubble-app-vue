@@ -1,5 +1,9 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
+import { ref } from 'vue'
+import { Search } from '@element-plus/icons-vue'
+const query = ref('')
+const select = ref('')
 
 const formInline = reactive({
   user: '',
@@ -13,29 +17,42 @@ const onSubmit = () => {
 </script>
 
 <template>
-  <el-form :inline="true" :model="formInline" class="demo-form-inline">
-    <el-form-item label="">
-      <el-input v-model="formInline.user" placeholder="Approved by" />
-    </el-form-item>
-    <el-form-item label="">
-      <el-select v-model="formInline.region" placeholder="Activity zone">
-        <el-option label="Zone one" value="shanghai" />
-        <el-option label="Zone two" value="beijing" />
-      </el-select>
-    </el-form-item>
-    <el-form-item label="">
-      <el-select v-model="formInline.project" placeholder="Project">
-        <el-option label="Project one" value="circular system" />
-        <el-option label="Project two" value="renewable energy" />
-      </el-select>
-    </el-form-item>
-    <el-form-item>
-      <el-button type="primary" @click="onSubmit">Query</el-button>
-    </el-form-item>
-  </el-form>
+  <section class="searchbar-flex-container">
+    <div class="searchbar-statement">
+      探索校園行動，找到你的永續主場
+    </div>
+      <el-input
+        v-model="query"
+        value="清華校園永續生活創新實驗室"
+        class="input-with-select"
+      >
+        <template #append>
+          <el-button :icon="Search" />
+        </template>
+      </el-input>
+  </section>
 </template>
 
 <style>
+.el-input-group {
+  width: 75%;
+  height: 7.5vh;
+}
+.el-input__inner {
+  font-size: 1.25rem;
+  font-weight: Medium;
+}
+.searchbar-statement {
+  font-size: 2rem;
+  font-weight: Bold;
+}
+.searchbar-flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 20vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .input-with-select .el-input-group__prepend {
   background-color: var(--el-fill-color-blank);
 }

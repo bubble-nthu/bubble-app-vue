@@ -138,6 +138,7 @@ import { ref } from 'vue'
   display: block;
   border-radius: 16px 16px 0 0;
   object-fit: cover;
+  margin-bottom: 0.5rem;
 }
 /* On mouse-over, add a deeper shadow */
 .card-body:hover {
