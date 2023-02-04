@@ -28,11 +28,11 @@ const router = createRouter({
       props: true,
       component: () => import('./views/UserSingleView.vue')
     },
-    {
+    /*{
       path: '/search',
       name: 'Search',
       component: () => import('./views/SearchResult/SearchResultView.vue')
-    },
+    },*/
   ]
 })
 
