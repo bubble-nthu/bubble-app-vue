@@ -9,6 +9,32 @@ import App from './App.vue'
 const app = createApp(App)
 
 // setup routes
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: () => import('./views/HomePage/HomePage.vue')
+    },
+    {
+      path: '/user',
+      name: 'Users',
+      component: () => import('./views/UsersView.vue')
+    },
+    {
+      path: '/user/:id',
+      name: 'UserSingle',
+      props: true,
+      component: () => import('./views/UserSingleView.vue')
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: () => import('./views/SearchResult/SearchResultView.vue')
+    },
+  ]
+})
 
 app.use(ElementPlus)
 // tell Vue to use router
