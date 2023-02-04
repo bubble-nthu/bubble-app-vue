@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import SearchResultBar from 'SearchResultBar.vue'
-import SearchResultList from 'SearchResultList.vue'
+import SearchResultBar from './SearchResultBar.vue'
+import SearchResultList from './SearchResultList.vue'
 
 </script>
 
