@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import Card from '../../Function/Card.vue'
+import Card from '/src/components/Function/Card.vue'
 
 </script>
 
@@ -8,10 +8,10 @@ import Card from '../../Function/Card.vue'
   <section>
     <div class="homepage-section-flex-container">
       <span class="material-symbols-outlined homepage-section-title-icon">
-      business_center
+      celebration
       </span>
       <span>
-        精選專案
+        近期活動
       </span>
     </div>
     <el-carousel autoplay="false" indicator-position="outside">

@@ -1,5 +1,5 @@
 <script setup>
-import HomePage from './components/HomePage/HomePage.vue'
+import HomePage from './views/HomePage/HomePage.vue'
 //  <HomePage />
 import { useRouter } from 'vue-router'
 const router = useRouter()

@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: () => import('./components/HomePage/HomePage.vue')
+      component: () => import('./views/HomePage/HomePage.vue')
     },
     {
       path: '/user',
@@ -27,7 +27,12 @@ const router = createRouter({
       name: 'UserSingle',
       props: true,
       component: () => import('./views/UserSingleView.vue')
-    }
+    },
+    {
+      path: '/search',
+      name: 'Search',
+      component: () => import('./views/SearchResult/SearchResultView.vue')
+    },
   ]
 })
 

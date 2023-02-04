@@ -9,7 +9,7 @@ import { ref } from 'vue'
       <div class="footer-statement">
         <scan>期許校園永續專案都能像泡泡一樣越飛越高，</scan>
         <br/>
-        <scan>讓更多人看見，並發揮更長久的影響力！</scan>
+        <scan>讓更多人看見，發揮更長遠的影響力。</scan>
       </div>
     </div>
     <hr class="footer-line"/>
@@ -29,7 +29,9 @@ import { ref } from 'vue'
 }
 .footer-statement {
   font-size: 1rem;
-  text-align:left;
+  text-align: left;
+  font-weight: Bold;
+  color: var(--el-color-info-dark-2);
 }
 .footer-statement-flex-container {
   display: flex;
