@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import Header from '../BasicLayout/Header.vue'
-import Footer from '../BasicLayout/Footer.vue'
-import SearchBar from '../Function/SearchBar.vue'
+import Header from '/src/components/BasicLayout/Header.vue'
+import Footer from '/src/components/BasicLayout/Footer.vue'
+import SearchBar from '/src/components/Function/SearchBar.vue'
 import Activity from './Recommendation/Activity.vue'
 import Project from './Recommendation/Project.vue'
 
