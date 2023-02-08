@@ -24,7 +24,9 @@ import Card from '@/components/Function/Card.vue'
               :span="8"
               style="display: flex"
             >
-              <Card />
+              <router-link :to="{ name: 'ActivitySingle', params: { activityId: `${o}` }}">
+                <Card />
+              </router-link>
             </el-col>
           </el-row>
         </div>

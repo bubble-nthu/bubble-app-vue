@@ -20,6 +20,12 @@ export const route = createRouter({
       props: true,
       component: () => import('./views/UserSingleView.vue')
     },
+    {
+      path: '/activities/:activityId',
+      name: 'ActivitySingle',
+      props: true,
+      component: () => import('./views/ActivitySingleView/ActivitySingleView.vue')
+    },
     /*{
       path: '/search',
       name: 'Search',

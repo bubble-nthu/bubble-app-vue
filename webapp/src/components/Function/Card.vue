@@ -116,6 +116,7 @@ import { ref } from 'vue'
   font-weight: Bold;
   line-height: 1.5;
   text-align: left;
+  color: var(--el-text-color-primary);
 }
 .time {
   font-size: 12px;
